@@ -1,0 +1,46 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
+
+body {
+    @apply bg-gradient-to-br from-rose-50 via-pink-50 to-purple-50 text-gray-800;
+    font-family: 'Inter', sans-serif;
+}
+
+.font-script {
+    font-family: 'Dancing Script', cursive;
+}
+
+.font-serif {
+    font-family: 'Playfair Display', serif;
+}
+
+.glass-effect {
+    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.25);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.heart-float {
+    animation: heartFloat 3s ease-in-out infinite;
+}
+
+@keyframes heartFloat {
+    0%, 100% { transform: translateY(0px) rotate(0deg); }
+    50% { transform: translateY(-10px) rotate(5deg); }
+}
+
+.petal-fall {
+    animation: petalFall 8s linear infinite;
+}
+
+@keyframes petalFall {
+    0% { transform: translateY(-100vh) rotate(0deg); opacity: 1; }
+    100% { transform: translateY(100vh) rotate(360deg); opacity: 0; }
+}
+
+.countdown-glow {
+    box-shadow: 0 0 30px rgba(236, 72, 153, 0.3);
+}
